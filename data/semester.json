@@ -1,15 +1,7 @@
 [
   {
     "semester": 1,
-    "subjects": ["MTHI", "PHY", "CT", "PST", "BEE", "C"],
-    "assignedTeacher": {
-      "MTHI": "RCH",
-      "PHY": "SPD",
-      "CT": "AK",
-      "PST": "CSW",
-      "BEE": "ADK",
-      "C": "SMD"
-    }
+    "subjects": ["MTHI", "PHY", "CT", "PST", "BEE", "C"]
   },
   {
     "semester": 2,
