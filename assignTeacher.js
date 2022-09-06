@@ -28,6 +28,10 @@ class Teacher {
     this.inTime = inTime;
     this.outTime = outTime;
   }
+
+  isEqual(obj) {
+    return !!(this.name === obj.name);
+  }
 }
 
 class Subject {
@@ -37,7 +41,7 @@ class Subject {
     this.lecture = lecture;
     this.practical = practical;
     this.alias = alias;
-    this.teachers = teachers || []
+    this.teachers = teachers || [];
   }
 
   isEqual(obj) {
@@ -73,7 +77,7 @@ class Semester {
 
   isEqual(obj) {
     const isTrue = !!(this.number === obj.number);
-    return !!isTrue
+    return !!isTrue;
   }
 
   assignTeacherToSubject(teacher, subject) {
@@ -101,20 +105,20 @@ const teachers = teacher_data.map(t => {
 });
 
 subjects.forEach(subject => {
-    teachers.forEach(teacher => {
-        teacher.subjects.forEach(t_subject => {
-            if (t_subject.isEqual(subject)) {
-                subject.assignTeacher(teacher);
-            }
-        }) 
-    })
+  teachers.forEach(teacher => {
+    teacher.subjects.forEach(t_subject => {
+      if (t_subject.isEqual(subject)) {
+        subject.assignTeacher(teacher);
+      }
+    });
+  });
 });
 
 const semesters = semester_data.map(sem => {
   const subject_map = sem.subjects.map(s => {
-    return subjects.find(sub => { 
-        return sub.alias === s;
-    })
+    return subjects.find(sub => {
+      return sub.alias === s;
+    });
   });
 
   return new Semester(sem.semester, subject_map);
@@ -123,12 +127,32 @@ const semesters = semester_data.map(sem => {
 const mainRoutine = [];
 
 function assignTeacherToSemester() {
-    semesters.forEach(semester => {
-        semester.subjects.forEach(subject => {
-            const assignedTeacher = subject.teachers[Math.floor(Math.random() * (subject.teachers.length - 0))]
-            semester.assignTeacherToSubject(assignedTeacher, subject);
-        })
-    })
+  const assignedTeacherRefTable = [];
+
+  semesters.forEach(semester => {
+    semester.subjects.forEach(subject => {
+      const randomTeacher =
+        subject.teachers[
+          Math.floor(Math.random() * (subject.teachers.length - 0))
+        ];
+
+      let isExist = false;
+      // teacher can only be assigned once
+      assignedTeacherRefTable.forEach(teacher => {
+        if (randomTeacher === undefined || teacher === undefined) return;
+
+        if (randomTeacher.isEqual(teacher)) {
+          isExist = true;
+        }
+      });
+
+      if (isExist) return;
+
+      assignedTeacherRefTable.push(randomTeacher);
+
+      semester.assignTeacherToSubject(randomTeacher, subject);
+    });
+  });
 }
 
-assignTeacherToSemester()
+assignTeacherToSemester();
