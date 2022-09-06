@@ -1,0 +1,42 @@
+[
+  {
+    "semester": 1,
+    "subjects": ["MTHI", "PHY", "CT", "PST", "BEE", "C"],
+    "assignedTeacher": {
+      "MTHI": "RCH",
+      "PHY": "SPD",
+      "CT": "AK",
+      "PST": "CSW",
+      "BEE": "ADK",
+      "C": "SMD"
+    }
+  },
+  {
+    "semester": 2,
+    "subjects": ["MTHII", "NT", "MFCS", "ED", "EDR", "OOP"]
+  },
+  {
+    "semester": 3,
+    "subjects": ["MTHIII", "LC", "DSA", "PQT", "WT", "ECI"]
+  },
+  {
+    "semester": 4,
+    "subjects": ["MTHIV", "MALP", "JAVA", "DBMS", "SEF", "PI"]
+  },
+  {
+    "semester": 5,
+    "subjects": ["AOS", "NM", "COA", "ONM", "SSP", "POC"]
+  },
+  {
+    "semester": 6,
+    "subjects": ["CG", "CN", "INTS", "IS", "OODM", "PII"]
+  },
+  {
+    "semester": 7,
+    "subjects": ["MMS", "ICTPM", "BPIT", "NP", "TC", "ElectiveI"]
+  },
+  {
+    "semester": 8,
+    "subjects": ["MWC", "EE", "SPIT", "ElectiveII", "PII"]
+  }
+]

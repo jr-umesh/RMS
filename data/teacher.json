@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Roshan Chitrakar",
+    "workload": 20,
+    "teacher_initial": "RCH",
+    "subject": ["SPIT" ]
+  },
+  {
+    "name": "Samundra Poudel",
+    "workload": 20,
+    "teacher_initial": "SPD",
+    "subject": ["EE"]
+  },
+  {
+    "name": "Ashim Khadka",
+    "workload": 20,
+    "teacher_initial": "AK",
+    "subject": ["MFCS", "IS", "INTS"]
+  },
+  {
+    "name": "Himal Acharya",
+    "workload": 20,
+    "teacher_initial": "HA",
+    "subject": ["BEE"]
+  },
+  {
+    "name": "Subash Manandhar",
+    "workload": 20,
+    "teacher_initial": "SMD",
+    "subject": ["DBMS", "C", "AOS"]
+  },
+  {
+    "name": "Chabbi Siwakoti",
+    "workload": 20,
+    "teacher_initial": "CSW",
+    "subject": ["MTHI", "MTHII", "MTHIII", "MTHIV"]
+  },
+  {
+    "name": "Arun Devkota",
+    "workload": 20,
+    "teacher_initial": "ADK",
+    "subject": ["PHY"]
+  }
+]
