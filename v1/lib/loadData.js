@@ -15,7 +15,7 @@ exports.loadData = () => {
   const semester_data = JSON.parse(semester_file);
   const subject_data = JSON.parse(subject_file);
 
-  const time_slots = [
+  const timeSlots = [
     '7:00-8:30',
     '8:30-10:00',
     '10:40-12:10',
@@ -59,5 +59,5 @@ exports.loadData = () => {
     return new Semester(sem.semester, subject_map);
   });
 
-  return {semesters, subjects, teachers, time_slots};
+  return {semesters, subjects, teachers, timeSlots};
 };

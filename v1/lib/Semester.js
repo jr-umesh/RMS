@@ -2,7 +2,7 @@ class Semester {
   constructor(number, subjects, assignedTeacher) {
     this.number = number;
     this.subjects = subjects;
-    this.assignedTeacher = this.assignedTeacher || [];
+    this.assignedTeacher = this.assignedTeacher || {};
   }
 
   isEqual(obj) {
@@ -11,7 +11,7 @@ class Semester {
   }
 
   assignTeacherToSubject(teacher, subject) {
-    this.assignedTeacher.push([teacher, subject]);
+    this.assignedTeacher[subject] = teacher;
   }
 }
 
