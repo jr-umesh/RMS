@@ -1,15 +1,10 @@
-const fs = require('fs');
-
 /**
  * assigns for each semesters teachers for each subjects taught
  * - only single teacher per subject per semester
  *
  * @returns Array[Semester] semesters
  */
-exports.assignTeacher = () => {
-  const {loadData} = require('./lib/loadData');
-  const {semesters, subjects} = loadData();
-
+exports.assignTeacher = (semesters, subjects) => {
   const assignedTeacherRefTable = [];
 
   semesters.forEach(semester => {
@@ -42,8 +37,3 @@ exports.assignTeacher = () => {
 
   return semesters;
 };
-
-fs.writeFileSync(
-  './result/[ODD]semester_assigned_teacher.json',
-  JSON.stringify(this.assignTeacher())
-);
