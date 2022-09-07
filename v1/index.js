@@ -15,6 +15,15 @@ const {Time} = require('./lib/Time');
 
 const {semesters, subjects, teachers, timeSlots} = loadData();
 
+const weekDays = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+];
+
 const oddSem = assignTeacher(
   semesters.filter(sem => sem.number % 2 !== 0),
   subjects
@@ -38,8 +47,24 @@ oddSem.forEach(semester => {
       // skip if no teacher assigned
       if (!semester.assignedTeacher[randomSubject]) continue;
 
+      // if subject already assigned for current day
       if (dayRoutine.find(slot => slot.subject === randomSubject)) continue;
 
+      // if teacher busy for current time slot
+      let isTeacherReserve = false;
+      Object.keys(mainRoutine).forEach(key => {
+        const tempSlot = mainRoutine[key][weekDays[i]].find(slot =>
+          slot.time.isEqual(timeSlots[timeSlotCount])
+        );
+
+        if (tempSlot.teacher === semester.assignedTeacher[randomSubject]) {
+          isTeacherReserve = true;
+        }
+      });
+
+      if (isTeacherReserve) continue;
+
+      // if subject repeat more than subject week count
       const subWeekCount = weekRoutine.filter(day => {
         return !!day.find(slot => slot.subject === randomSubject);
       }).length;
@@ -60,7 +85,13 @@ oddSem.forEach(semester => {
     weekRoutine.push(dayRoutine);
   }
 
-  mainRoutine[semester.number] = weekRoutine;
+  mainRoutine['semester ' + semester.number] = weekRoutine.reduce(
+    (acc, routine, idx) => ({
+      ...acc,
+      [weekDays[idx]]: routine,
+    }),
+    {}
+  );
 });
 
 // const evenSem = assignTeacher(
