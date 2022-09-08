@@ -34,10 +34,14 @@ const mainRoutine = {};
 oddSem.forEach(semester => {
   const weekRoutine = [];
 
+  // for week excluding saturday
   for (let i = 0; i < 6; i++) {
     let dayRoutine = [];
 
     let timeSlotCount = 0;
+    let loopCount = 0;
+
+    // repeat until all the time slot filled for a day
     while (timeSlotCount < timeSlots.length) {
       const randomSubject =
         semester.subjects[
@@ -52,10 +56,14 @@ oddSem.forEach(semester => {
 
       // if teacher busy for current time slot
       let isTeacherReserve = false;
+      console.log('mainRoutine :>> ', mainRoutine['1']);
       Object.keys(mainRoutine).forEach(key => {
         const tempSlot = mainRoutine[key][weekDays[i]].find(slot =>
           slot.time.isEqual(timeSlots[timeSlotCount])
         );
+
+        // if for that time slot not assigned any teacher
+        if (tempSlot === undefined) return;
 
         if (tempSlot.teacher === semester.assignedTeacher[randomSubject]) {
           isTeacherReserve = true;
@@ -69,7 +77,22 @@ oddSem.forEach(semester => {
         return !!day.find(slot => slot.subject === randomSubject);
       }).length;
 
-      if (subWeekCount > 6) continue;
+      const subjectLectureCount = subjects.find(
+        s => s.alias === randomSubject
+      ).lecture;
+
+      // TODO: we get stuck in this since naive way so impossible to fill all the time slot
+      // if more than the total lecture for week
+      ++loopCount;
+      if (subWeekCount > subjectLectureCount) {
+        if (loopCount >= 100) break;
+        else continue;
+      }
+
+      console.log(
+        `dayRoutine for semester ${semester.number} [${weekDays[i]}]`,
+        dayRoutine
+      );
 
       dayRoutine.push(
         new Slot(
@@ -85,7 +108,7 @@ oddSem.forEach(semester => {
     weekRoutine.push(dayRoutine);
   }
 
-  mainRoutine['semester ' + semester.number] = weekRoutine.reduce(
+  mainRoutine[semester.number] = weekRoutine.reduce(
     (acc, routine, idx) => ({
       ...acc,
       [weekDays[idx]]: routine,
