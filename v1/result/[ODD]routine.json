@@ -1,0 +1,403 @@
+{
+  "1": {
+    "Sunday": [
+      {
+        "teacher": "ADK",
+        "subject": "PHY",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "HA",
+        "subject": "BEE",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "HMG",
+        "subject": "MTHI",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "SMD",
+        "subject": "C",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Monday": [
+      {
+        "teacher": "TRB",
+        "subject": "CT",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "HA",
+        "subject": "BEE",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "ADK",
+        "subject": "PHY",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "HMG",
+        "subject": "MTHI",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Tuesday": [
+      {
+        "teacher": "HMG",
+        "subject": "MTHI",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "ADK",
+        "subject": "PHY",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "HA",
+        "subject": "BEE",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "SMD",
+        "subject": "C",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Wednesday": [
+      {
+        "teacher": "HA",
+        "subject": "BEE",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "ADK",
+        "subject": "PHY",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "SMD",
+        "subject": "C",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "HMG",
+        "subject": "MTHI",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Thursday": [
+      {
+        "teacher": "ADK",
+        "subject": "PHY",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "SMD",
+        "subject": "C",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "TRB",
+        "subject": "CT",
+        "time": {"from": "10:40", "till": "12:10"}
+      }
+    ],
+    "Friday": [
+      {
+        "teacher": "TRB",
+        "subject": "CT",
+        "time": {"from": "7:00", "till": "8:30"}
+      }
+    ]
+  },
+  "3": {
+    "Sunday": [
+      {
+        "teacher": "SHA",
+        "subject": "LC",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "DKT",
+        "subject": "WT",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "MKD",
+        "subject": "DSA",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "UMP",
+        "subject": "ECI",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Monday": [
+      {
+        "teacher": "UMP",
+        "subject": "ECI",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "CSW",
+        "subject": "MTHIII",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "DKT",
+        "subject": "WT",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "MKD",
+        "subject": "DSA",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Tuesday": [
+      {
+        "teacher": "DKT",
+        "subject": "WT",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "CSW",
+        "subject": "MTHIII",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "SHA",
+        "subject": "LC",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "MKD",
+        "subject": "DSA",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Wednesday": [
+      {
+        "teacher": "MKD",
+        "subject": "DSA",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "CSW",
+        "subject": "MTHIII",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "SHA",
+        "subject": "LC",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "UMP",
+        "subject": "ECI",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Thursday": [
+      {
+        "teacher": "SHA",
+        "subject": "LC",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "UMP",
+        "subject": "ECI",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "DKT",
+        "subject": "WT",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "CSW",
+        "subject": "MTHIII",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Friday": []
+  },
+  "5": {
+    "Sunday": [
+      {
+        "teacher": "YOD",
+        "subject": "POC",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "SPD",
+        "subject": "ONM",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "MHN",
+        "subject": "SSP",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "RSH",
+        "subject": "NM",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Monday": [
+      {
+        "teacher": "RSH",
+        "subject": "NM",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "YOD",
+        "subject": "POC",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "MHN",
+        "subject": "SSP",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "SPD",
+        "subject": "ONM",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Tuesday": [
+      {
+        "teacher": "RSH",
+        "subject": "NM",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "MHN",
+        "subject": "SSP",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "YOD",
+        "subject": "POC",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "SPD",
+        "subject": "ONM",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Wednesday": [
+      {
+        "teacher": "YOD",
+        "subject": "POC",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "RSH",
+        "subject": "NM",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "MHN",
+        "subject": "SSP",
+        "time": {"from": "10:40", "till": "12:10"}
+      }
+    ],
+    "Thursday": [],
+    "Friday": []
+  },
+  "7": {
+    "Sunday": [
+      {
+        "teacher": "RKJ",
+        "subject": "ICTPM",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "RKM",
+        "subject": "MMS",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "RCH",
+        "subject": "BPIT",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "DMK",
+        "subject": "TC",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Monday": [
+      {
+        "teacher": "RKM",
+        "subject": "MMS",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "RCH",
+        "subject": "BPIT",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "RKJ",
+        "subject": "ICTPM",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "DMK",
+        "subject": "TC",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Tuesday": [
+      {
+        "teacher": "RCH",
+        "subject": "BPIT",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "RKM",
+        "subject": "MMS",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "RKJ",
+        "subject": "ICTPM",
+        "time": {"from": "10:40", "till": "12:10"}
+      },
+      {
+        "teacher": "DMK",
+        "subject": "TC",
+        "time": {"from": "12:10", "till": "1:20"}
+      }
+    ],
+    "Wednesday": [
+      {
+        "teacher": "RKJ",
+        "subject": "ICTPM",
+        "time": {"from": "7:00", "till": "8:30"}
+      },
+      {
+        "teacher": "DMK",
+        "subject": "TC",
+        "time": {"from": "8:30", "till": "10:00"}
+      },
+      {
+        "teacher": "RKM",
+        "subject": "MMS",
+        "time": {"from": "10:40", "till": "12:10"}
+      }
+    ],
+    "Thursday": [],
+    "Friday": []
+  }
+}
