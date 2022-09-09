@@ -1,0 +1,22 @@
+[
+  {
+    "number": 2,
+    "subjects": ["MTHII", "NT", "MFCS", "ED", "EDR", "OOP"],
+    "assignedTeacher": []
+  },
+  {
+    "number": 4,
+    "subjects": ["MTHIV", "MALP", "JAVA", "DBMS", "SEF", "PI"],
+    "assignedTeacher": []
+  },
+  {
+    "number": 6,
+    "subjects": ["CG", "CN", "INTS", "IS", "OODM", "PII"],
+    "assignedTeacher": []
+  },
+  {
+    "number": 8,
+    "subjects": ["MWC", "EE", "SPIT", "ElectiveII", "PII"],
+    "assignedTeacher": []
+  }
+]
