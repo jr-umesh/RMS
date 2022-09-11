@@ -1,0 +1,324 @@
+[
+    {
+    "name": "Physics",
+    "credit": "4",
+    "lecture": "4",
+    "practical": "2",
+    "alias": "PHY"
+  },
+  {
+    "name": "Engineering Mathematics I",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "MTHI"
+  },
+  {
+    "name": "Communicatioin Techniques",
+    "credit": "2",
+    "lecture": "2",
+    "practical": "0",
+    "alias": "CT"
+  },
+  {
+    "name": "Problem Solving Techniques",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "PST"
+  },
+  {
+    "name": "Foundation of IT",
+    "credit": "2",
+    "lecture": "2",
+    "practical": "0",
+    "alias": "FIT"
+  },
+  {
+    "name": "Programming in C",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "C"
+  },
+  {
+    "name": "Engineering Mathematics II",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "MTHII"
+  },
+  {
+    "name": "Logic Circuits",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "LC"
+  },
+  {
+    "name": "Mathematical Foundation of Computer Science",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "MFCS"
+  },
+  {
+    "name": "Engineering Drawing",
+    "credit": "2",
+    "lecture": "0",
+    "practical": "6",
+    "alias": "EDR"
+  },
+  {
+    "name": "Object Oriented Programming in C",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "OOP"
+  },
+  {
+    "name": "Web Technology",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "WT"
+  },
+  {
+    "name": "Engineering Mathematics III",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "MTHIII"
+  },
+  {
+    "name": "Software Engineering Fundamentals",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "SEF"
+  },
+  {
+    "name": "Data Structures and Algorithms",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "DSA"
+  },
+  {
+    "name": "Probability and Queuing Theory",
+    "credit": "2",
+    "lecture": "2",
+    "practical": "0",
+    "alias": "PQT"
+  },
+  {
+    "name": "Programming in Java",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "JAVA"
+  },
+  {
+    "name": "Microprocessor and Assembly Language Programming",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "MALP"
+  },
+  {
+    "name": "Numerical Methods",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "NM"
+  },
+  {
+    "name": "Computer Graphics",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "2",
+    "alias": "CG"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "2",
+    "alias": "COA"
+  },
+  {
+    "name": "Database Management Systems",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "DBMS"
+  },
+  {
+    "name": "Object Oriented Design and Modeling through UML",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "OODM"
+  },
+  {
+    "name": "Project I",
+    "credit": "1",
+    "lecture": "0",
+    "practical": "3",
+    "alias": "PI"
+  },
+  {
+    "name": "Applied Operating Systems",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "AOS"
+  },
+  {
+    "name": "Simulation and Modelling",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "SNM"
+  },
+  {
+    "name": "Artiificial Intelligence and Neural Networks",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "AINN"
+  },
+  {
+    "name": "Organization and Management",
+    "credit": "2",
+    "lecture": "2",
+    "practical": "0",
+    "alias": "ONM"
+  },
+  {
+    "name": "Analysis and Design of Algorithms",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "ADA"
+  },
+  {
+    "name": "System Programming",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "2",
+    "alias": "SP"
+  },
+  {
+    "name": "Computer Networks",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "2",
+    "alias": "CN"
+  },
+  {
+    "name": "Engineering Economics",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "EE"
+  },
+  {
+    "name": "Multimedia Systems",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "3",
+    "alias": "MMS"
+  },
+  {
+    "name": "Project II",
+    "credit": "2",
+    "lecture": "0",
+    "practical": "4",
+    "alias": "PII"
+  },
+  {
+    "name": "Principles of Programming Languages",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "PPL"
+  },
+  {
+    "name": "Object Oriented Software Development",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "OOSD"
+  },
+  {
+    "name": "Real Time Systems",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "RTS"
+  },
+  {
+    "name": "Distributed Systems",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "DS"
+  },
+  {
+    "name": "Enterprise Application Development",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "EAPD"
+  },
+  {
+    "name": "Image Processing and Pattern Recognition",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "2",
+    "alias": "IPPR"
+  },
+  {
+    "name": "Software testing, Verification, Validation and Quality Assurance",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "SQL"
+  },
+  {
+    "name": "Elective I",
+    "credit": "3",
+    "lecture": "0",
+    "practical": "0",
+    "alias": "ElectiveI"
+  },
+  {
+    "name": "Network Programming",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "2",
+    "alias": "NP"
+  },
+  {
+    "name": "Software Project Management",
+    "credit": "3",
+    "lecture": "3",
+    "practical": "0",
+    "alias": "SPM"
+  },
+  {
+    "name": "Elective II",
+    "credit": "3",
+    "lecture": "0",
+    "practical": "0",
+    "alias": "ElectiveII"
+  },
+  {
+    "name": "Project III",
+    "credit": "5",
+    "lecture": "0",
+    "practical": "5",
+    "alias": "PIII"
+  }
+]
