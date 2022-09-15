@@ -1,93 +1,82 @@
-/**
- * 1. assign teacher to semester for each subject. (take odd or even only)
- * 2. create initial routine for each semester.
- */
+const {loadData} = require('./lib/loadData');
+const {generateEmptyRoutine} = require('./lib/generateEmptyRoutine');
+const {TIME_SLOTS, WEEK_DAYS} = require('./lib/constants');
 
-const fs = require('fs');
+const {departments} = loadData();
 
-const { loadData } = require('./lib/loadData');
-const { assignTeacher } = require('./lib/assignTeacher');
-const { Semester } = require('./lib/Semester');
-const { Slot } = require('./lib/Slot');
-const { Subject } = require('./lib/Subject');
-const { Teacher } = require('./lib/Teacher');
-const { Time } = require('./lib/Time');
+const isSafe = (subjectMap, routine, row, col, subjectKey) => {
+  let subjectRepeatCount = 0;
+  for (let i = 0; i < TIME_SLOTS.length; i++) {
+    if (routine[row][i] === subjectKey) ++subjectRepeatCount;
+  }
 
-const { semesters, subjects, teachers, timeSlots } = loadData();
+  if (subjectRepeatCount >= 1) return false;
 
-const weekDays = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-];
+  return true;
+};
 
-const oddSem = assignTeacher(
-  semesters.filter(sem => sem.number % 2 !== 0),
-  subjects
-);
+const solveRoutine = (subjectMap, routine, row, col) => {
+  if (row === WEEK_DAYS.length - 1 && col === TIME_SLOTS.length) return true;
 
-const isSafeSlot = (
-  subjects,
-  subject,
-  dayRoutine,
-  weekRoutine,
-  mainRoutine,
-  currentWeekDay,
-  currentTimeSlot
-) => {
+  if (col == TIME_SLOTS.length) {
+    row++;
+    col = 0;
+  }
 
-  let isSafe = true;
-  if (dayRoutine.find(slot => slot.subject === subject)) isSafe = false;
+  if (routine[row][col] !== null)
+    return solveRoutine(subjectMap, routine, row, col + 1);
 
-  let isTeacherReserve = false;
-  Object.keys(mainRoutine).forEach(key => {
-    const tempSlot = mainRoutine[key][currentWeekDay].find(slot => {
-      return slot.time.isEqual(currentTimeSlot)
-    })
+  const subjectKeys = Object.keys(subjectMap);
+  for (let idx = 0; idx < subjectKeys.length; idx++) {
+    if (isSafe(subjectMap, routine, row, col, subjectKeys[idx])) {
+      routine[row][col] = subjectKeys[idx];
 
-    if (tempSlot === undefined) return;
-
-    if (tempSlot.teacher === semesters.assignedTeacher[subject]) {
-      isTeacherReserve = true;
+      if (solveRoutine(subjectMap, routine, row, col + 1)) return true;
     }
 
-    if (isTeacherReserve) isSafe = false;
+    console.log(subjectMap);
+    routine[row][col] = null;
+  }
 
-    const subWeekCount = weekRoutine.filter(day => {
-      return !!day.find(slot => slot.subject === subject)
-    }).length;
+  return false;
+};
 
-    const subjectLectureCount = subjects.find(s => s.alias === subject).lecture;
+const generateInitialRoutine = (subjects, semester) => {
+  const currentRoutine = semester.routine;
 
-    if (subWeekCount > subjectLectureCount) isSafe = false;
-
-    return isSafe;
-  })
-}
-
-const generateRoutine = (semesters, subjects, timeSlots) => {
-  semesters.forEach(semester => {
-    const weekRoutine = [];
-
-    for (let i = 0; i< 6; i++) {
-      let dayRoutine = [];
-
-      for (let j = 0; j < timeSlots.length; j++) {
-        semesters.subjects.forEach(semSubject => {
-          dayRoutine.push(
-            new Slot(
-              semester.assignedTeacher[semSubject],
-              semSubject,
-              timeSlots[j]
-            )
-          )
-
-        })
+  // map to a iterable map with all required data
+  const subjectToSlotMap = subjects
+    .filter(sub => !!semester.subjects.find(semSub => semSub === sub.alias))
+    .reduce((acc, semSub) => {
+      if (+semSub.lecture > 0) {
+        acc[`L-${semSub.alias}-${semSub.teacher}`] = +semSub.lecture;
       }
-    }
-  })
-}
+      if (+semSub.practical > 0) {
+        acc[`P-${semSub.alias}-${semSub.teacher}`] = +semSub.lecture;
+      }
+      return acc;
+    }, {});
 
+  const totalLectureCount = Object.keys(subjectToSlotMap).reduce((acc, s) => {
+    acc += subjectToSlotMap[s];
+    return acc;
+  }, 0);
+
+  if (totalLectureCount > 24) return;
+
+  solveRoutine(subjectToSlotMap, currentRoutine, 0, 0);
+
+  console.log(currentRoutine);
+};
+
+const generateRoutinesForDepartment = departments => {
+  const itDepartment = departments[0];
+
+  // TODO: for only IT department
+  itDepartment.semesters.forEach(semester => {
+    // TODO: for now provide subjects since only alias stored in semester.subjects
+    generateInitialRoutine(itDepartment.subjects, semester);
+  });
+};
+
+generateRoutinesForDepartment(departments);
