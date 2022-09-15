@@ -1,0 +1,36 @@
+{
+  "IT": [
+    {
+      "semester": 1,
+      "subjects": ["MTHI", "PHY", "CT", "PST", "BEE", "C"]
+    },
+    {
+      "semester": 2,
+      "subjects": ["MTHII", "NT", "MFCS", "ED", "EDR", "OOP"]
+    },
+    {
+      "semester": 3,
+      "subjects": ["MTHIII", "LC", "DSA", "PQT", "WT", "ECI"]
+    },
+    {
+      "semester": 4,
+      "subjects": ["MTHIV", "MALP", "JAVA", "DBMS", "SEF"]
+    },
+    {
+      "semester": 5,
+      "subjects": ["AOS", "NM", "COA", "ONM", "SSP", "POC"]
+    },
+    {
+      "semester": 6,
+      "subjects": ["CG", "CN", "INTS", "IS", "OODM"]
+    },
+    {
+      "semester": 7,
+      "subjects": ["MMS", "ICTPM", "BPIT", "NP", "TC"]
+    },
+    {
+      "semester": 8,
+      "subjects": ["MWC", "EE", "SPIT"]
+    }
+  ]
+}

@@ -15,7 +15,7 @@
     "name": "Ashim Khadka",
     "workload": 20,
     "teacher_initial": "AK",
-    "subject": ["MFCS", "IS", "INTS"]
+    "subject": ["MWC", "PST"]
   },
   {
     "name": "Himal Acharya",
@@ -147,6 +147,18 @@
     "name": "Bhushan Thapa",
     "workload": 20,
     "teacher_initial": "BST",
-    "subject": ["JAVA"]
+    "subject": ["JAVA", "PQT"]
+  },
+  {
+    "name": "Chandra Prakash Bhatta",
+    "workload": 20,
+    "teacher_initial": "CRB",
+    "subject": ["MFCS", "IS"]
+  },
+  {
+    "name": "Nipesh Shrestha",
+    "workload": 20,
+    "teacher_initial": "NS",
+    "subject": ["INTS", "EDR"]
   }
 ]
