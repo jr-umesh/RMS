@@ -20,7 +20,7 @@ class Teacher {
   }
 
   isEqual(obj) {
-    return !!(this.name === obj.name);
+    return !!(this.initials === obj.initials);
   }
 }
 

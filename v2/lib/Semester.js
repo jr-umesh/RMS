@@ -1,8 +1,10 @@
+const {generateEmptyRoutine} = require('./generateEmptyRoutine');
+
 class Semester {
-  constructor(number, subjects, assignedTeacher) {
-    this.number = number;
+  constructor(semester, subjects, routine) {
+    this.semester = semester;
     this.subjects = subjects;
-    this.assignedTeacher = this.assignedTeacher || {};
+    this.routine = routine || generateEmptyRoutine();
   }
 
   isEqual(obj) {
@@ -10,8 +12,8 @@ class Semester {
     return !!isTrue;
   }
 
-  assignTeacherToSubject(teacher, subject) {
-    this.assignedTeacher[subject] = teacher;
+  setRoutine(routine) {
+    this.routine = routine;
   }
 }
 
