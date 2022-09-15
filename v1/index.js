@@ -13,16 +13,7 @@ const {Subject} = require('./lib/Subject');
 const {Teacher} = require('./lib/Teacher');
 const {Time} = require('./lib/Time');
 
-const {semesters, subjects, teachers, timeSlots} = loadData();
-
-const weekDays = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-];
+const {semesters, subjects, teachers, timeSlots, weekDays} = loadData();
 
 const oddSem = assignTeacher(
   semesters.filter(sem => sem.number % 2 !== 0),
@@ -52,14 +43,19 @@ oddSem.forEach(semester => {
       if (!semester.assignedTeacher[randomSubject]) continue;
 
       // if subject already assigned for current day
-      if (dayRoutine.find(slot => slot.subject === randomSubject)) continue;
+      if (
+        dayRoutine.find(
+          slot => slot !== undefined && slot.subject === randomSubject
+        )
+      )
+        continue;
 
       // if teacher busy for current time slot
       let isTeacherReserve = false;
-      console.log('mainRoutine :>> ', mainRoutine['1']);
       Object.keys(mainRoutine).forEach(key => {
-        const tempSlot = mainRoutine[key][weekDays[i]].find(slot =>
-          slot.time.isEqual(timeSlots[timeSlotCount])
+        const tempSlot = mainRoutine[key][weekDays[i]].find(
+          slot =>
+            slot !== undefined && slot.time.isEqual(timeSlots[timeSlotCount])
         );
 
         // if for that time slot not assigned any teacher
@@ -74,7 +70,9 @@ oddSem.forEach(semester => {
 
       // if subject repeat more than subject week count
       const subWeekCount = weekRoutine.filter(day => {
-        return !!day.find(slot => slot.subject === randomSubject);
+        return !!day.find(
+          slot => slot !== undefined && slot.subject === randomSubject
+        );
       }).length;
 
       const subjectLectureCount = subjects.find(
@@ -84,15 +82,10 @@ oddSem.forEach(semester => {
       // TODO: we get stuck in this since naive way so impossible to fill all the time slot
       // if more than the total lecture for week
       ++loopCount;
-      if (subWeekCount > subjectLectureCount) {
+      if (subWeekCount >= subjectLectureCount) {
         if (loopCount >= 100) break;
         else continue;
       }
-
-      console.log(
-        `dayRoutine for semester ${semester.number} [${weekDays[i]}]`,
-        dayRoutine
-      );
 
       dayRoutine.push(
         new Slot(

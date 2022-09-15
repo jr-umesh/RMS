@@ -98,7 +98,7 @@ const subjects = subject_data.map(s => {
 
 const teachers = teacher_data.map(t => {
   const subject_map = t.subject.map(s => {
-    return subjects.find(sub => sub.alias === s);
+    return subjects.find(sub => sub.alias === s).alias;
   });
 
   return new Teacher(t.name, t.workload, t.teacher_initial, subject_map);
@@ -107,8 +107,10 @@ const teachers = teacher_data.map(t => {
 subjects.forEach(subject => {
   teachers.forEach(teacher => {
     teacher.subjects.forEach(t_subject => {
-      if (t_subject.isEqual(subject)) {
-        subject.assignTeacher(teacher);
+      if (t_subject === undefined || subject === undefined) return;
+
+      if (t_subject === subject.alias) {
+        subject.assignTeacher(teacher.initials);
       }
     });
   });
@@ -118,30 +120,31 @@ const semesters = semester_data.map(sem => {
   const subject_map = sem.subjects.map(s => {
     return subjects.find(sub => {
       return sub.alias === s;
-    });
+    }).alias;
   });
 
   return new Semester(sem.semester, subject_map);
 });
 
-const mainRoutine = [];
-
 function assignTeacherToSemester() {
   const assignedTeacherRefTable = [];
 
   semesters.forEach(semester => {
-    semester.subjects.forEach(subject => {
+    semester.subjects.forEach(subjectAlias => {
+      const subject = subjects.find(s => s.alias === subjectAlias);
+
       const randomTeacher =
         subject.teachers[
           Math.floor(Math.random() * (subject.teachers.length - 0))
         ];
 
-      let isExist = false;
       // teacher can only be assigned once
+      let isExist = false;
+
       assignedTeacherRefTable.forEach(teacher => {
         if (randomTeacher === undefined || teacher === undefined) return;
 
-        if (randomTeacher.isEqual(teacher)) {
+        if (randomTeacher === teacher) {
           isExist = true;
         }
       });
@@ -150,9 +153,11 @@ function assignTeacherToSemester() {
 
       assignedTeacherRefTable.push(randomTeacher);
 
-      semester.assignTeacherToSubject(randomTeacher, subject);
+      semester.assignTeacherToSubject(randomTeacher, subject.alias);
     });
   });
 }
 
 assignTeacherToSemester();
+
+fs.writeFileSync('./result/semester_v1.json', JSON.stringify(semesters));

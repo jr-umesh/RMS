@@ -59,5 +59,14 @@ exports.loadData = () => {
     return new Semester(sem.semester, subject_map);
   });
 
-  return {semesters, subjects, teachers, timeSlots};
+  const weekDays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+  ];
+
+  return {semesters, subjects, teachers, timeSlots, weekDays};
 };
