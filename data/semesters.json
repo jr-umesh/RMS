@@ -14,7 +14,7 @@
     },
     {
       "semester": 4,
-      "subjects": ["MTHIV", "MALP", "JAVA", "DBMS", "SEF"]
+      "subjects": ["MTHIV", "MALP", "JAVA", "DBMS", "SEF", "PI"]
     },
     {
       "semester": 5,
@@ -22,7 +22,7 @@
     },
     {
       "semester": 6,
-      "subjects": ["CG", "CN", "INTS", "IS", "OODM"]
+      "subjects": ["CG", "CN", "INTS", "IS", "OODM", "PII"]
     },
     {
       "semester": 7,
@@ -30,7 +30,41 @@
     },
     {
       "semester": 8,
-      "subjects": ["MWC", "EE", "SPIT"]
+      "subjects": ["MWC", "EE", "SPIT", "PIII"]
+    }
+  ],
+  "SE": [
+    {
+      "semester": 1,
+      "subjects": ["MTHI", "PHY", "CT", "PST", "FIT", "C"]
+    },
+    {
+      "semester": 2,
+      "subjects": ["MTHII", "LC", "MFCS", "WT", "EDR", "OOP"]
+    },
+    {
+      "semester": 3,
+      "subjects": ["MTHIII", "SEF", "DSA", "PQT", "JAVA", "MALP"]
+    },
+    {
+      "semester": 4,
+      "subjects": ["NM", "CG", "COA", "DBMS", "OODM", "PI"]
+    },
+    {
+      "semester": 5,
+      "subjects": ["AOS", "SNM", "AINN", "ONM", "ADA", "SP"]
+    },
+    {
+      "semester": 6,
+      "subjects": ["PPL", "CN", "EE", "OOSD", "MMS", "PII"]
+    },
+    {
+      "semester": 7,
+      "subjects": ["RTS", "DS", "EAPD", "IPPR", "SQL", "ElectiveI"]
+    },
+    {
+      "semester": 8,
+      "subjects": ["NP", "SPM", "ElectiveII", "PIII"]
     }
   ]
 }

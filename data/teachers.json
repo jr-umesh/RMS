@@ -27,7 +27,7 @@
     "name": "Subash Manandhar",
     "workload": 20,
     "teacher_initial": "SMD",
-    "subject": ["DBMS", "C", "AOS"]
+    "subject": ["DBMS", "C", "AOS", "SNM"]
   },
   {
     "name": "Chabbi Siwakoti",
@@ -87,7 +87,7 @@
     "name": "Madan Kadariya",
     "workload": 20,
     "teacher_initial": "MKD",
-    "subject": ["DSA", "NP", "AOS"]
+    "subject": ["DSA", "NP", "AOS", "DS"]
   },
   {
     "name": "Mahesh Neupane",
@@ -111,7 +111,7 @@
     "name": "Roshan Koju",
     "workload": 20,
     "teacher_initial": "RKJ",
-    "subject": ["ICTPM"]
+    "subject": ["ICTPM", "SPIT"]
   },
   {
     "name": "Rishi Kant Marseni",
@@ -153,12 +153,18 @@
     "name": "Chandra Prakash Bhatta",
     "workload": 20,
     "teacher_initial": "CRB",
-    "subject": ["MFCS", "IS"]
+    "subject": ["MFCS", "IS", "SP"]
   },
   {
     "name": "Nipesh Shrestha",
     "workload": 20,
     "teacher_initial": "NS",
-    "subject": ["INTS", "EDR"]
+    "subject": ["INTS", "IPPR", "OODM"]
+  },
+  {
+    "name": "Pradeep Bhatta",
+    "workload": 20,
+    "teacher_initial": "PRB",
+    "subject": ["EDR"]
   }
 ]
