@@ -26,11 +26,11 @@
     },
     {
       "semester": 7,
-      "subjects": ["MMS", "ICTPM", "BPIT", "NP", "TC"]
+      "subjects": ["MMS", "ICTPM", "BPIT", "NP", "TC", "ElectiveI"]
     },
     {
       "semester": 8,
-      "subjects": ["MWC", "EE", "SPIT", "PIII"]
+      "subjects": ["MWC", "EE", "SPIT", "PIII", "ElectiveII"]
     }
   ],
   "SE": [

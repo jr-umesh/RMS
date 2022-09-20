@@ -281,6 +281,13 @@
       "alias": "NP"
     },
     {
+      "name": "Elective I",
+      "credit": "3",
+      "lecture": "0",
+      "practical": "0",
+      "alias": "ElectiveI"
+    },
+    {
       "name": "Telecommunications",
       "credit": "3",
       "lecture": "3",
@@ -314,6 +321,13 @@
     "lecture": "0",
     "practical": "5",
     "alias": "PIII"
+    },
+    {
+      "name": "Elective II",
+      "credit": "3",
+      "lecture": "0",
+      "practical": "0",
+      "alias": "ElectiveII"
     }
   ],
   "SE": [
